@@ -1,0 +1,19 @@
+<form (ngSubmit)="Login()" #frm=ngForm>
+    <table>
+        <tr>
+            <td>Enter username </td>
+            <td><input type="text" name="username" [(ngModel)]="login.uname"></td>
+        </tr>
+        <tr>
+            <td>Enter password </td>
+            <td><input type="password" name="password" [(ngModel)]="login.password"></td>
+        </tr>
+        <tr>
+            <button type="submit">Login</button>
+        </tr>
+    </table>
+</form>
+<div [hidden]=!s>
+    {{ login.password }}
+    
+</div>

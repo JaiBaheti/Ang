@@ -1,0 +1,23 @@
+<div>
+    <table>
+    <tr>
+        <th>Task</th>
+        <th>Category</th>
+        <th>Priority</th>
+        <th>Status</th>
+        <th>Assign Date</th>
+        <th>Finish Date</th>
+    </tr>
+    <tr *ngFor="let task of tasks">
+        <td>{{ task.task }}</td>
+        <td>{{ task.category }}</td>
+        <td>{{ task.priority }}</td>
+        <td>{{ task.status }}</td>
+        <td>{{ task.assignDate }}</td>
+        <td>{{ task.finishDate }}</td>
+        <td>{{ task.id }}</td>
+        <td><button class="btn btn-danger" (click)="deleteTask(task.id)">Delete</button> </td>
+    </tr>
+    
+</table>
+</div>
